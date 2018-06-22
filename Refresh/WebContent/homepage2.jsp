@@ -1,5 +1,4 @@
-<%@page import="Bean.User"%>
-<%@ page import="Bean.Article"%>
+﻿<%@ page import="Bean.Article"%>
 <%@ page import="Impl.ArticleImpl"%>
 <%@ page import ="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -8,19 +7,13 @@
 <%
 	String basePath = request.getContextPath();
 	pageContext.setAttribute("basePath", basePath);
-	User user = (User)session.getAttribute("user");
-	pageContext.setAttribute("user", user);
-	String me = "visitor";
-	if(user!=null){
-		me = user.getUsername();
-	}
-	Article[] art = new Article[10];
+	
+	Article[] art = new Article[8];
 	for(int i=0;i<art.length;i++)
 		art[i]= new Article();
 	
 	ArticleImpl aImpl = new ArticleImpl();
-	art = aImpl.getHotArticle();			//数据库内搜索得到最热文章
-	
+	art = aImpl.getRecentArticle();				//数据库内搜索得到最新文章
 	pageContext.setAttribute("art", art);
 	int num = 0;
 %> 
@@ -31,9 +24,12 @@
 <title>homepage</title>
 
 <script src="./js/jquery.js"></script>
-<script src="./js/bootstrap.js"></script>
-<script src="./js/require.js"></script>
+   <script src="./js/bootstrap.js"></script>
+   <script src="./js/require.js"></script>
+
+
 <link href="./css/header_and_footer.css" rel="stylesheet" />
+
 <link rel="stylesheet" href="./css/homepage.css" />
 <style>
 body{margin: 0;font-family: "微软雅黑";}
@@ -47,7 +43,7 @@ margin-top:60px;
 margin-left:0;
 float:left;
 }
-.carousel-item {
+.carousel-item{
 line-height: 336px;
 color: #fff;
 font-family:  Arial Black;
@@ -64,9 +60,9 @@ font-family:  Arial Black;
 <div class="example">
 	<div class="ft-carousel" id="carousel_1">
 		<ul class="carousel-inner">
-		    <li class="carousel-item"><img src="./image/1.jpeg" /></li>
-			<li class="carousel-item"><img src="./image/10.png" /></li>
-			<li class="carousel-item"><img src="./image/6.jpg" /></li>
+		<li class="carousel-item"><img src="./image/1.jpeg" /></li>
+			<li class="carousel-item"><img src="./image/2.jpeg" /></li>
+			<li class="carousel-item"><img src="./image/3.png" /></li>
 			<li class="carousel-item"><img src="./image/4.jpg" /></li>
 			<li class="carousel-item"><img src="./image/5.jpg" /></li>
 			<li class="carousel-item"><img src="./image/6.jpg" /></li>
@@ -78,6 +74,7 @@ font-family:  Arial Black;
 </div>
 </div>
 <!--卡片-->
+
    <div class="card">
      
 	 <a class="cardPart">
@@ -113,14 +110,17 @@ font-family:  Arial Black;
 	 </a>
    
    </div>
-   <!-- 展示最热文章 -->
+   
+   <!-- 展示最新文章 -->
    <div class="article">
+   
        <ul class="noteList">
        <c:forEach var="getArticle" items="${art}" varStatus="num">
            <li>
 			   <a href="" class="wrap-img">
 			      <img src="./image/1.jpeg">
 			   </a>
+			   
 			   <div class="content">
 			       <a href="${basePath}/ArticlePage/PersonalBlog2.jsp?articleId=${getArticle.getId()}" class="noteTitle">
 			       ${getArticle.getTitle()}
@@ -129,7 +129,7 @@ font-family:  Arial Black;
 				    ${getArticle.getContent()}
 				    </p>
 				   <div class="meta">
-				      <a href="${basePath}/personal/scanpage.jsp?me=<%=me%>&he=${getArticle.getAuthor()}" class="nickname">
+				      <a href="" class="nickname">
 					   ${getArticle.getAuthor()} 
 					  </a>
 					  <a href="" >
@@ -147,20 +147,23 @@ font-family:  Arial Black;
 			
         </c:forEach>
 	   </ul>
+   
    </div>
    
+  
    <div class="rightSide">
+      
 	  <div class="board">
-	     <a href="" class="partition">
+	     <a href="./homepage.jsp" class="partition">
             30日热门
          </a>
 		 
-		 <a href="./homepage2.jsp" class="partition">
+		 <a href="" class="partition">
             7日最新
          </a>
 		 
 		 <a href="./ArticlePage/publishArticle.jsp" class="partition">
-            写文章
+             写文章
          </a>
 		 
 		 <a href="./topic/topicDetail.jsp" class="partition">
@@ -250,7 +253,10 @@ font-family:  Arial Black;
 				   写了21.3k字，1.3k喜欢
 				 </p>
 			  </li>
+			  
 		   </ul>
+		   
+		   
 		   <a href="" class="find-more">
 		      查看全部 >
 		   </a>
