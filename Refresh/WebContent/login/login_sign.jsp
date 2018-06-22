@@ -1,23 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-    
  <%
  	String basePath = request.getContextPath();
- 	pageContext.setAttribute("baePath",basePath);
+ 	pageContext.setAttribute("basePath",basePath);
  %>
 <!DOCTYPE html>
-
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Sign Up Login</title>
 <link rel="stylesheet" href="../css/login.css">
-<script src="/Refresh/js/jquery.js"></script>
+<script src="${basePath}/js/jquery.js"></script>
+<script src="../js/login.js"></script>
 <script>
 function login(){
 	var basePath = '<%=basePath%>';
 	var username = $('#username').val()
 	var password = $('#password').val()
+	
 	$.post(basePath+"/UserAction",{type:"login"
 		,username:username
 		,password:password},function(result){
@@ -25,13 +25,12 @@ function login(){
 				alert('登录成功')
 				window.location.href="../homepage.jsp"
 			}else{
-				alert("登录失败")
+				alert('登录失败')
 			}
 		})
 }
 function register(){
 	var basePath = '<%=basePath%>';
-
 	var email = $('#email').val()
 	var username = $('#usernamer').val()
 	var password = $('#passwordr').val()
@@ -66,15 +65,11 @@ function register(){
 		})
 }
 </script>
-
-
 </head>
 
 <body>
-
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-
 <div class="cotn_principal">
   <div class="cont_centrar">
     <div class="cont_login">
@@ -101,11 +96,9 @@ function register(){
         <div class="cont_img_back_"> <img src="../image/po.jpg" alt="" /> </div>
         <div class="cont_form_login"> <a href="#" onClick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
           <h2>LOGIN</h2>
-          <input type="text" id="username" name="Username" placeholder="Email" />
+          <input type="text" id="username" name="Username" placeholder="Username" />
           <input type="password" id="password" name="Password" placeholder="Password" />
-
           <button type="button" class="btn_login" onClick="login()">LOGIN</button>
- 
         </div>
         <div class="cont_form_sign_up"> <a href="#" onClick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
           <h2>SIGN UP</h2>
@@ -119,8 +112,5 @@ function register(){
     </div>
   </div>
 </div>
-
-<script src="../js/login.js"></script>
-
 </body>
 </html>
