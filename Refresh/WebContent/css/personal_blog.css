@@ -1,0 +1,57 @@
+#author 
+{
+    margin: 30px 0 40px;
+}
+#info 
+{
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 8px;
+}
+#authorname
+{
+	margin-right: 3px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+.button
+{
+	display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.button-success
+{
+	border-radius: 40px;
+    color: #fff;
+    background-color: #42c02e;
+    border-color: #42c02e;
+}
+.follow
+{
+    border-color: #42c02e;
+}
+#meta
+{
+	font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+}
+#article-foot
+{
+	color:grey;
+}

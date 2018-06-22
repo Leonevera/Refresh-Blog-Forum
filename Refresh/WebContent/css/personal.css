@@ -1,0 +1,538 @@
+body{
+	background-color:#f6f6f6;
+	font-family:黑体;
+}
+
+
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var{  
+    padding: 0;  
+    margin: 0;  
+}  
+  
+  
+a{  
+    color: black;  
+    text-decoration: none;  
+}  
+ul{  
+    list-style: none;  
+}  
+input{
+	border-radius:5px;
+}
+textarea{
+	border-radius:5px;
+}
+/*选项卡*/
+#tab{  
+    width: 1000px;  
+    height: auto;  
+    border: 1px solid #ddd; 
+    background-color:white;	
+    box-shadow: 0 0 2px #ddd;  
+    margin: 70px 0 0 15%;  
+    /*处理超出的内容*/  
+    overflow: hidden;  
+	box-shadow: 20px 20px 10px #888888;
+	
+}  
+  
+/*选项卡的头部*/  
+#tab-header{  
+    background-color: white;  
+    height: 33px;  
+    text-align: center;  
+    position: relative;  
+	color: #738d7e; 
+}  
+#tab-header ul{  
+    width: 500px;  
+    position: absolute;  
+    left: -1px;  
+}  
+#tab-header ul li{  
+    float: left;  
+    width: 98px;  
+    height: 33px;  
+    line-height: 33px;  
+    padding: 0 1px;  
+    border-bottom: 1px solid #dddddd;  
+	font-size:18px;
+}  
+#tab-header ul li.selected{  
+    font-weight: bolder;  
+    border-bottom: 0;  
+    border-left: 1px solid #dddddd;  
+    border-right: 1px solid #dddddd;  
+    padding: 0;  
+  
+}  
+  
+#tab-header ul li:hover{  
+    
+    color:#4aa9aa;	
+}  
+  
+/*主要内容*/  
+#tab-content{
+	background-color:white;
+	
+}
+
+#tab-content .part{  
+    display: none; 
+    height:auto;
+}  
+  
+#tab-content .part ul li{  
+    float: left;  
+    /*background-color: #ab3234;*/  
+    margin: 15px 10px;  
+    width: 225px;  
+}  
+  
+#tab-content .part ul li a:hover{  
+    color: orange;  
+}  
+
+
+.intro-word{
+	width:10%;
+	float:left;
+	text-align:center;
+}
+.intro-content{
+	width:80%;
+	background-color:#ab3234;
+	float:left;
+	height:auto;
+}
+
+/*左侧*/
+.type{
+	text-align:right;
+	width:10%;
+	height:100%;
+	margin-right:5%;
+	float:left;
+	font-size:17px;
+}
+
+
+/*右侧*/
+.content{
+	width:80%;
+	height:100%;
+    float:left;
+	
+}
+
+
+/*头像*/
+#avatar{
+	width:100%;
+	height:120px;
+	margin-top:4%;
+	margin-bottom:2%;
+	background-color:white;
+}
+
+.avatar-picture{
+	width:100px;
+	height:100px;
+	border-radius:50px;
+	overflow:hiden;
+	
+}
+
+/*悬浮框*/
+.white_content1 {  
+      display: none;  
+	  position: absolute;  
+	  top: 25%; 
+	  left: 25%;  
+	  width: 50%; 
+	  height: 400px;
+	  border: 1px solid orange;  
+	  background-color: white;  
+	  z-index:1002;  
+	  overflow: auto;  
+	  /*
+	  box-shadow: 20px 20px 10px #888888;
+	  */
+	  } 
+	  
+/*悬浮框出现时的背景*/
+.black_overlay1{  
+      display: none;  
+	  position: absolute;  
+	  top: 0%;  
+	  left: 0%;  
+	  width: 100%;  
+	  height: 200%;  
+	  background-color: black;  
+	  z-index:1001;  
+	  -moz-opacity: 0.8;  
+	  opacity:.80;  
+	  filter: alpha(opacity=80);  
+	  } 
+
+/*关闭悬浮框按钮*/
+#msgShut1{
+	margin-left:86%;
+	width:5%;
+	float:left;
+	text-align:center;
+}
+
+#msgShut1:hover{
+	background-color:#ab3234;
+	color:white;
+}
+#msgShut1:hover>a{
+	background-color:#ab3234;
+	color:white;
+	text-decoration:none;
+}	
+
+/*图片选择按钮*/
+.PictureButton{
+	background-color:gray;
+	width:10%;
+	height:5%;
+	margin-top:20%;
+	margin-left:47%;
+	text-align:center;
+	border:1px solid gray;
+	/*
+	box-shadow: 8px 8px 2px green;
+	*/
+}
+.PictureButton>a{
+	text-decoration:none;
+}
+/*图片要求*/
+.PictureDemand{
+	
+	width:40%;
+	height:5%;
+	margin-top:5%;
+	margin-left:30%;
+	text-align:center;
+	
+}  
+
+/*昵称*/
+#nickname{
+	width:100%;
+	height:35px;
+	margin-top:2%;
+	/*background-color:#efa97a;*/
+	background-color:white;
+}
+.inputName{
+	height:30px;
+	font-family:30px;
+	padding-top:0;
+	width:60%;
+	background-color:white;
+}
+
+/*邮箱*/
+#email{
+	width:100%;
+	height:250px;
+	margin-top:2%;
+	background-color:white;
+}
+
+/*邮箱登录（最外框架）*/
+.EmailLog{
+	width:80%;
+	height:60%;
+	background-color:#f6f6f6;
+	font-family:黑体;
+	color:gray;
+}
+
+/*logo*/
+.EmailIcon{
+	width:15%;
+	height:100%;
+	background-color:#f6f6f6;
+	float:left;
+	text-align:center;
+	font-size:50px;
+	color:#0092c7;
+	
+	padding-top:30px;
+}
+
+/*文字*/
+/*修改邮箱按钮*/
+.EmailChange{
+	color:#ab3234;
+	margin-left:10px;
+}
+
+.EmailChange>a{
+	color:#ab3234;
+}
+
+.EmailChange>a:hover{
+	text-decoration:none;
+}
+
+.EmailLog1{
+	width:85%;
+	height:100%;
+	float:left;
+}
+
+.EmailLog2{
+	width:99%;
+	height:16%;
+	margin-top:4%;
+	margin-left:1%;
+	
+}
+
+.EmailLog3{
+	width:35%;
+	height:30px;
+	background-color:#697967;
+	float:left;
+	padding-top:1%;
+	margin-left:5%;
+	color:white;
+	text-align:center;
+	font-size:15px;
+}
+
+.EmailLog4{
+	margin-top:1%;
+	width:99%;
+	height:50%;
+	margin-left:1%;
+	padding-top:1%;
+}
+
+.EmailLog4>h5>a{
+	color:red;
+}
+
+.EmailLog4>h5>a:hover{
+	text-decoration:none;
+}
+.EmailNotice{
+	float:left;
+	padding-top:2%;
+	color:black;
+}
+
+.input1{
+	height:30px;
+	font-family:30px;
+	padding-top:0;
+	margin-bottom:1%;
+	width:60%;
+	background-color:white;
+}
+
+.input2{
+	height:20px;
+	font-family:30px;
+	padding-top:0;
+	width:20%;
+	background-color:white;
+}
+.input3{
+	height:20px;
+	font-family:30px;
+	padding-top:0;
+	margin-bottom:1%;
+	width:60%;
+	background-color:white
+}
+
+/*悬浮窗（学校）*/
+.white_content {  
+      display: none;  
+	  position: absolute;  
+	  top: 75%; 
+	  left: 25%;  
+	  width: 50%; 
+	  height: 400px;
+	  border: 1px solid orange;  
+	  background-color: white;  
+	  z-index:1002;  
+	  overflow: auto;  } 
+/*悬浮窗出现时的背景*/
+.black_overlay{  
+      display: none;  
+	  position: absolute;  
+	  top: 0%;  
+	  left: 0%;  
+	  width: 100%;  
+	  height: 200%;  
+	  background-color: black;  
+	  z-index:1001;  
+	  -moz-opacity: 0.8;  
+	  opacity:.80;  
+	  filter: alpha(opacity=80);  
+	  }  
+	  
+#msgShut{
+	margin-left:95%;
+	width:5%;
+	float:left;
+	text-align:center;
+}
+
+#msgShut:hover{
+	background-color:#ab3234;
+	color:white;
+}
+#msgShut:hover>a{
+	background-color:#ab3234;
+	color:white;
+}
+
+.ChooseSchool{
+	background-color:#ab3234;
+	width:10%;
+	text-align:center;
+	text-decoration:none;
+	height:25px;
+	padding-top:2px;
+}
+.ChooseSchool>a{
+	text-decoration:none;
+}
+
+.cities{
+	width:90%;
+	height:80%;
+	overflow:scroll;
+	margin-left:5%;
+}
+.ToChoose{
+	width:90%;
+	margin-left:5%;
+	margin-bottom:2%;
+	border-bottom:1px solid black; 
+}
+
+/*学历*/
+#grade{
+	width:100%;
+	height:100px;
+	margin-top:2%;
+	background-color:white;
+}
+
+/*个人简介*/
+#introduction{
+	width:100%;
+	height:180px;
+	margin-top:2%;
+	background-color:white;
+}
+
+.inputtext {border:none; background:#fff;} 
+
+/*保存按钮*/
+#save{
+	width:100%;
+	height:180px;
+	margin-top:2%;
+	background-color:#efa97a;
+}
+
+/*当前登录账号*/
+#current{
+	margin-top:4%;
+	width:100%;
+	height:70px;
+	
+	border-bottom:1px #ab3234 solid;
+}
+/*左侧*/
+.type2{
+	text-align:center;
+	width:10%;
+	height:100%;
+	float:left;
+	margin-right:1%;
+}
+/*第三方账号*/
+#other{
+	margin-top:4%;
+	width:100%;
+	height:150px;
+	background-color:white;
+}
+
+.OtherChannel{
+	
+	float:left;
+	width:30%;
+	height:20%;
+}
+.OtherChannel>a{
+	color:gray;
+	text-decoration:none;
+}
+.OtherChannel>a:hover{
+   color:#ab3234;
+}
+
+
+
+
+/*勾选*/
+.SelectType{
+	float:left;
+	width:30%;
+	height:30px;
+	padding-left:5%;
+}
+
+.SelectContent{
+	float:left;
+	height:30px;
+	margin-left:0;
+	width:60%;
+	
+}
+
+
+
+.SelectLable{
+	float:left;
+	background-color:black;
+}
+
+#msgDiv {
+    z-index:10001;
+    width:500px;
+    height:400px;
+    background:white;
+    border:#336699 1px solid;
+    position:absolute;
+    left:50%;
+    top:20%;
+    font-size:12px;
+    margin-left:-225px;
+    display: none;
+}
+#bgDiv {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right:0px;
+    background-color: #777;
+    filter:progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75)
+    opacity: 0.6;
+}

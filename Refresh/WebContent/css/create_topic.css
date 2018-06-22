@@ -1,0 +1,260 @@
+.left_side{
+	position: relative;
+    height: 800px;
+    overflow-y: auto;
+    background-color: #404040;
+    color: #f2f2f2;
+    z-index: 100;
+	display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.66666667%;
+	float:left;
+}
+
+input::-webkit-search-cancel-button{
+display: none;
+}  --Çå³ý¹È¸èä¯ÀÀÆ÷ÏÂµÄ search ²æºÅ
+input[type=search]::-ms-clear{
+display: none;
+}
+
+.comeback {
+    padding: 30px 18px 5px;
+    text-align: center;
+	
+}
+
+.comeback>a {
+    display: block;
+    font-size: 15px;
+    padding: 9px 0;
+    color: #ec7259;
+    border: 1px solid rgba(236,114,89,.8);
+    border-radius: 20px;
+   text-decoration:none;
+}
+
+.createFolder{
+    padding: 0 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+.describe {
+    cursor: pointer;
+    color: white;
+}
+
+.describe>span {
+    margin-left: 4px;
+}
+
+.newContent{
+	overflow:hidden;
+}
+
+.newContent{
+	height: 85px;
+    opacity: 1;
+    margin-top: 10px;
+	overflow: hidden;
+    margin: 10px 0 0;
+}
+
+.getInput {
+    width: 100%;
+    height: 35px;
+    color: #ccc;
+    background-color: #595959;
+    border: 1px solid #333;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.save1{
+	color: #42c02e;
+    border-color: #42c02e;
+	margin-left: 4px;
+    background-color: #404040;
+	position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 30px;
+    line-height: 20px;
+    padding: 4px 12px;
+    border: 1px solid ;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    transition: all .2s cubic-bezier(.645,.045,.355,1);
+}
+
+.cancel1{
+	margin-left:8px;
+	background-color: #404040;
+    border-color: transparent;
+	color: #999;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 30px;
+    line-height: 20px;
+    padding: 4px 12px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .2s cubic-bezier(.645,.045,.355,1);
+}
+
+.contentList{
+	position: relative;
+    z-index: 0;
+    background-color: #8c8c8c;
+	margin-bottom: 50px;
+	padding-left:0;
+}
+
+.passageList{
+    position: relative;
+    line-height: 40px;
+    list-style: none;
+    font-size: 15px;
+    color: #f2f2f2;
+    background-color: #404040;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.passageList>span {
+    display: block;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.topic{
+	position: relative;
+    line-height: 40px;
+    list-style: none;
+    font-size: 15px;
+    color: #f2f2f2;
+    background-color: #404040;
+    padding: 0 15px;
+    cursor: pointer;
+	 background-color: #666;
+    border-left: 3px solid #ec7259;
+    padding-left: 12px;
+}
+
+.contentSide{
+	height:500px;
+	position: relative;
+    width: 60%;
+    
+	display: block;
+    box-sizing: border-box;
+    
+	float:left;
+	margin-left:10%;
+}
+
+
+.newArticle{
+	
+}
+
+.saved{
+    position: absolute;
+    right: 5px;
+    top: 2px;
+	font-size:15px;
+}
+
+.isolation{
+	height:50px;
+	padding: 5px 0; 
+	color: #ccc
+}
+
+#articleTitle{
+	height:50px;
+	font-size:45px;
+	width:80%;
+	border:none;
+	outline:none;
+	margin-top:10px;
+}
+
+#articleTitle:focus{
+	outline:none;
+}
+
+.topicContent{
+	margin-top:5%;
+	margin-left:5%;
+}
+
+.uploadButton{
+	margin-top:20px;
+	width:100px;
+	height:30px;
+	font-size:17px;
+}
+
+.topicNotic{
+	margin-top:20px;
+}
+
+#topicOfArticle{
+	width:50%;
+	height:30px;
+	font-size:25px;
+	float:left
+}
+
+.searchTopic{
+	margin-left:20px;
+	height:30px;
+}
+
+#searchResult{
+   width:60%;
+   background-color:red;
+   padding-top:10px;
+}
+
+#topicResult{
+	margin-top:20px;
+	position: relative;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    padding: 4px 12px;
+    border: 1px solid green;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .2s cubic-bezier(.645,.045,.355,1);
+	width:80px;
+	height:40px;
+	background-color:green;
+	border-radius:4px;
+	margin-right:50px;
+}
+
+#up{
+	margin-top:20px;
+}
+
+#content{
+	height:600px;
+}
+
